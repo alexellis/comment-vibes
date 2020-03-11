@@ -1,0 +1,48 @@
+version: 1.0
+provider:
+  name: openfaas
+  gateway: http://127.0.0.1:8080
+
+functions:
+  view:
+    lang: golang-middleware
+    handler: ./view
+    image: alexellis2/view:latest
+    secrets:
+    - host
+    - password
+    - username
+    - webhook-secret
+    environment:
+      postgres_db: defaultdb
+      postgres_sslmode: require
+      postgres_port: 25060
+      init_db: true
+
+  import-comment:
+    lang: golang-middleware
+    handler: ./import-comment
+    image: alexellis2/import-comment:latest
+    secrets:
+    - host
+    - password
+    - username
+    - webhook-secret
+    environment:
+      postgres_db: defaultdb
+      postgres_sslmode: require
+      postgres_port: 25060
+
+  comments:
+    lang: golang-middleware
+    handler: ./comments
+    image: alexellis2/comments:latest
+    secrets:
+    - host
+    - password
+    - username
+    - webhook-secret
+    environment:
+      postgres_db: defaultdb
+      postgres_sslmode: require
+      postgres_port: 25060
