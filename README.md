@@ -2,6 +2,18 @@
 
 Figure out the vibe of your community through emoji comments.
 
+## Kubernetes / Serverless example project
+
+This sample uses the OpenFaaS [golang-middleware](https://github.com/openfaas-incubator/golang-http-template/) template and three endpoints:
+
+* view - to render a HTML template (server-side)
+* import-comment - to receive and validate the webhook, then update postgres
+* comments - to render JSON from a postgres function
+
+You can see the results in the demo below. Feel free to try it out, if the endpoint is still up.
+
+The code is adapted from the [Serverless Single Page App - aka Open Source leaderboard](https://github.com/alexellis/leaderboard-app/)
+
 ## Demo
 
 Example output view the `/view` function:
