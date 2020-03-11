@@ -35,6 +35,11 @@ faas-cli secret create webhook-secret --from-literal $WEBHOOK_SECRET
 ## Deploy to OpenFaaS
 
 ```
+# Get the additional template
+faas-cli template store pull golang-middleware
+
+# Deploy
+
 faas-cli deploy
 ```
 
@@ -45,4 +50,3 @@ sed -i stack.yml s/alexellis2/your-docker-hub/g
 
 faas-cli up
 ```
-
