@@ -4,6 +4,8 @@ Figure out the vibe of your community through emoji comments.
 
 ## Demo
 
+![Example screenshot](docs/example.png)
+
 [Tester issue](https://github.com/teamserverless/proposals/issues/1)
 
 ## Create a postgres DB
