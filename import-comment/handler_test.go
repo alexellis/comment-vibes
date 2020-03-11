@@ -49,6 +49,14 @@ func Test_IsValid_ThumbsUp(t *testing.T) {
 	}
 }
 
+func Test_IsValid_NoComposites(t *testing.T) {
+	got := isEmoji(trim(`👍😎`))
+
+	if got != false {
+		t.Errorf("Want: %v\ngot: %v", false, got)
+	}
+}
+
 func Test_NoResult(t *testing.T) {
 	str := `no result`
 	want := "no result"

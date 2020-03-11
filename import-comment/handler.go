@@ -175,9 +175,12 @@ func trim(input string) string {
 
 func isEmoji(input string) bool {
 	sep := ([]byte(`:`))[0]
-	fmt.Println(input)
+
 	if len(input) >= 3 {
-		return input[0] == sep && input[len(input)-1] == sep
+		// No composites
+		if strings.Count(input, ":") == 2 {
+			return input[0] == sep && input[len(input)-1] == sep
+		}
 	}
 
 	return false
