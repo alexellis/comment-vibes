@@ -49,6 +49,7 @@ faas-cli deploy
 
 ```
 sed -i stack.yml s/alexellis2/your-docker-hub/g
+export DOCKER_BUILDKIT=1
 
-faas-cli up
+faas-cli up --tag=sha
 ```
