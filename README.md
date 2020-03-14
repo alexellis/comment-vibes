@@ -1,6 +1,6 @@
 ## comment-vibes
 
-Figure out the vibe of your community through emoji comments.
+This is a serverless CRUD sample project with Postgres and GitHub emoji integration. You can use it to tally up the emojis used in various comments across your GitHub projects.
 
 ## Kubernetes / Serverless example project
 
