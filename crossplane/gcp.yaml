@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: gcp
+---
+apiVersion: stacks.crossplane.io/v1alpha1
+kind: ClusterStackInstall
+metadata:
+  name: provider-gcp
+  namespace: gcp
+spec:
+  package: "crossplane/provider-gcp:master"
